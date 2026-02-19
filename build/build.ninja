@@ -47,25 +47,56 @@ cmake_ninja_workdir = /home/david/Altele/Proiecte/cpp/LibraryManager/build/
 #############################################
 # Order-only phony target for LibraryManager
 
-build cmake_object_order_depends_target_LibraryManager: phony || copy_resources
+build cmake_object_order_depends_target_LibraryManager: phony || CMakeFiles/LibraryManager.dir
 
-build CMakeFiles/LibraryManager.dir/src/Pages/libraryPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/libraryPage.cpp || cmake_object_order_depends_target_LibraryManager
-  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/libraryPage.cpp.o.d
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/addBooksPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/addBooksPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/addBooksPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/libraryPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/libraryPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/libraryPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/patronsPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/mainPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/mainPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/mainPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/library.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/library.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/library.cpp.o.d
   FLAGS = -g -std=c++17 -fPIE
   INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages
-  TARGET_COMPILE_PDB = CMakeFiles/LibraryManager.dir/
-  TARGET_PDB = LibraryManager.pdb
-
-build CMakeFiles/LibraryManager.dir/src/Pages/mainPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/mainPage.cpp || cmake_object_order_depends_target_LibraryManager
-  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/mainPage.cpp.o.d
-  FLAGS = -g -std=c++17 -fPIE
-  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
-  OBJECT_DIR = CMakeFiles/LibraryManager.dir
-  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages
-  TARGET_COMPILE_PDB = CMakeFiles/LibraryManager.dir/
-  TARGET_PDB = LibraryManager.pdb
 
 build CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/page.cpp || cmake_object_order_depends_target_LibraryManager
   DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o.d
@@ -73,8 +104,6 @@ build CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o: CXX_COMPILER__LibraryM
   INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages
-  TARGET_COMPILE_PDB = CMakeFiles/LibraryManager.dir/
-  TARGET_PDB = LibraryManager.pdb
 
 build CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp || cmake_object_order_depends_target_LibraryManager
   DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o.d
@@ -82,17 +111,6 @@ build CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o: CXX_COMPILER__L
   INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages
-  TARGET_COMPILE_PDB = CMakeFiles/LibraryManager.dir/
-  TARGET_PDB = LibraryManager.pdb
-
-build CMakeFiles/LibraryManager.dir/src/Pages/patronsPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patronsPage.cpp || cmake_object_order_depends_target_LibraryManager
-  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/patronsPage.cpp.o.d
-  FLAGS = -g -std=c++17 -fPIE
-  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
-  OBJECT_DIR = CMakeFiles/LibraryManager.dir
-  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages
-  TARGET_COMPILE_PDB = CMakeFiles/LibraryManager.dir/
-  TARGET_PDB = LibraryManager.pdb
 
 build CMakeFiles/LibraryManager.dir/src/main.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/main.cpp || cmake_object_order_depends_target_LibraryManager
   DEP_FILE = CMakeFiles/LibraryManager.dir/src/main.cpp.o.d
@@ -100,8 +118,6 @@ build CMakeFiles/LibraryManager.dir/src/main.cpp.o: CXX_COMPILER__LibraryManager
   INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src
-  TARGET_COMPILE_PDB = CMakeFiles/LibraryManager.dir/
-  TARGET_PDB = LibraryManager.pdb
 
 
 # =============================================================================
@@ -111,20 +127,13 @@ build CMakeFiles/LibraryManager.dir/src/main.cpp.o: CXX_COMPILER__LibraryManager
 #############################################
 # Link the executable LibraryManager
 
-build LibraryManager: CXX_EXECUTABLE_LINKER__LibraryManager_Debug CMakeFiles/LibraryManager.dir/src/Pages/libraryPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/mainPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/patronsPage.cpp.o CMakeFiles/LibraryManager.dir/src/main.cpp.o || copy_resources
+build LibraryManager: CXX_EXECUTABLE_LINKER__LibraryManager_Debug CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/addBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/libraryPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/mainPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/library.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o CMakeFiles/LibraryManager.dir/src/main.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   POST_BUILD = :
   PRE_LINK = :
-  TARGET_COMPILE_PDB = CMakeFiles/LibraryManager.dir/
   TARGET_FILE = LibraryManager
-  TARGET_PDB = LibraryManager.pdb
-
-
-#############################################
-# Utility command for copy_resources
-
-build copy_resources: phony CMakeFiles/copy_resources
+  TARGET_PDB = LibraryManager.dbg
 
 
 #############################################
@@ -149,13 +158,6 @@ build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
 
 build rebuild_cache: phony CMakeFiles/rebuild_cache.util
 
-
-#############################################
-# Custom command for CMakeFiles/copy_resources
-
-build CMakeFiles/copy_resources | ${cmake_ninja_workdir}CMakeFiles/copy_resources: CUSTOM_COMMAND
-  COMMAND = cd /home/david/Altele/Proiecte/cpp/LibraryManager/build && /usr/bin/cmake -E remove_directory /home/david/Altele/Proiecte/cpp/LibraryManager/build/res && /usr/bin/cmake -E copy_directory /home/david/Altele/Proiecte/cpp/LibraryManager/res /home/david/Altele/Proiecte/cpp/LibraryManager/build/res
-
 # =============================================================================
 # Target aliases.
 
@@ -167,7 +169,7 @@ build CMakeFiles/copy_resources | ${cmake_ninja_workdir}CMakeFiles/copy_resource
 #############################################
 # Folder: /home/david/Altele/Proiecte/cpp/LibraryManager/build
 
-build all: phony LibraryManager copy_resources
+build all: phony LibraryManager
 
 # =============================================================================
 # Built-in targets
@@ -190,14 +192,14 @@ build /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/cmake.veri
 #############################################
 # Re-run CMake if any of its inputs changed.
 
-build build.ninja: RERUN_CMAKE /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/cmake.verify_globs | /home/david/Altele/Proiecte/cpp/LibraryManager/CMakeLists.txt /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/VerifyGlobs.cmake /usr/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
+build build.ninja: RERUN_CMAKE /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/cmake.verify_globs | /home/david/Altele/Proiecte/cpp/LibraryManager/CMakeLists.txt /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/VerifyGlobs.cmake /usr/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake
   pool = console
 
 
 #############################################
 # A missing CMake input file is not an error.
 
-build /home/david/Altele/Proiecte/cpp/LibraryManager/CMakeLists.txt /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/VerifyGlobs.cmake /usr/share/cmake-3.28/Modules/CMakeCCompiler.cmake.in /usr/share/cmake-3.28/Modules/CMakeCCompilerABI.c /usr/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCXXCompiler.cmake.in /usr/share/cmake-3.28/Modules/CMakeCXXCompilerABI.cpp /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeCompilerIdDetection.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompileFeatures.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerABI.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineCompilerId.cmake /usr/share/cmake-3.28/Modules/CMakeDetermineSystem.cmake /usr/share/cmake-3.28/Modules/CMakeFindBinUtils.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeNinjaFindMake.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitIncludeInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseImplicitLinkInfo.cmake /usr/share/cmake-3.28/Modules/CMakeParseLibraryArchitecture.cmake /usr/share/cmake-3.28/Modules/CMakeSystem.cmake.in /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/CMakeTestCCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeTestCXXCompiler.cmake /usr/share/cmake-3.28/Modules/CMakeTestCompilerCommon.cmake /usr/share/cmake-3.28/Modules/Compiler/ADSP-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMCC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/ARMClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/AppleClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Borland-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Bruce-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Clang-DetermineCompilerInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/Comeau-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Compaq-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Compaq-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Cray-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/CrayClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Embarcadero-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Fujitsu-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/FujitsuClang-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GHS-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-FindBinUtils.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Compiler/HP-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/HP-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IAR-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMCPP-C-DetermineVersionInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMCPP-CXX-DetermineVersionInternal.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMClang-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IBMClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Intel-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/IntelLLVM-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/LCC-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/LCC-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/MSVC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVHPC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/NVIDIA-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OpenWatcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/OrangeC-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PGI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/PathScale-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SCO-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SDCC-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SunPro-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/SunPro-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/TI-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Tasking-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/TinyCC-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/VisualAge-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/VisualAge-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/Watcom-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XL-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XL-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XLClang-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/XLClang-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/zOS-C-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake /usr/share/cmake-3.28/Modules/Internal/FeatureTesting.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Determine-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
+build /home/david/Altele/Proiecte/cpp/LibraryManager/CMakeLists.txt /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/VerifyGlobs.cmake /usr/share/cmake-3.28/Modules/CMakeCInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCXXInformation.cmake /usr/share/cmake-3.28/Modules/CMakeCommonLanguageInclude.cmake /usr/share/cmake-3.28/Modules/CMakeGenericSystem.cmake /usr/share/cmake-3.28/Modules/CMakeInitializeConfigs.cmake /usr/share/cmake-3.28/Modules/CMakeLanguageInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInformation.cmake /usr/share/cmake-3.28/Modules/CMakeSystemSpecificInitialize.cmake /usr/share/cmake-3.28/Modules/Compiler/CMakeCommonCompilerMacros.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-C.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Compiler/GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-C.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU-CXX.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-GNU.cmake /usr/share/cmake-3.28/Modules/Platform/Linux-Initialize.cmake /usr/share/cmake-3.28/Modules/Platform/Linux.cmake /usr/share/cmake-3.28/Modules/Platform/UnixPaths.cmake CMakeCache.txt CMakeFiles/3.28.3/CMakeCCompiler.cmake CMakeFiles/3.28.3/CMakeCXXCompiler.cmake CMakeFiles/3.28.3/CMakeSystem.cmake: phony
 
 
 #############################################

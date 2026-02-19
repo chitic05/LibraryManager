@@ -4,7 +4,7 @@
 #include <unordered_map>
 #include <memory>
 #include <string>
-#include "page.h"
+#include "Pages/page.h"
 class PageManager{
     public:
         static void changePage(Page* nextPage);

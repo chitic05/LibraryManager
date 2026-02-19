@@ -1,7 +1,10 @@
 #include "Pages/pageManager.h"
-#include "Pages/libraryPage.h"
-#include "Pages/mainPage.h"
-#include "Pages/patronsPage.h"
+#include "Pages/MainPage/mainPage.h"
+#include "Pages/MainPage/LibraryPage/libraryPage.h"
+#include "Pages/MainPage/LibraryPage/addBooksPage.h"
+#include "Pages/MainPage/LibraryPage/removeBooksPage.h"
+#include "Pages/MainPage/LibraryPage/updateBooksPage.h"
+#include "Pages/MainPage/PatronsPage/patronsPage.h"
 #include "terminal.hpp"
 #include <stdexcept>
 
@@ -14,6 +17,9 @@ std::unordered_map<std::string, std::unique_ptr<Page>> PageManager::allPages = [
     pages["mainPage"] = std::make_unique<MainPage>();
     pages["libraryPage"] = std::make_unique<LibraryPage>();
     pages["patronsPage"] = std::make_unique<PatronsPage>();
+    pages["addBooksPage"] = std::make_unique<AddBooksPage>();
+    pages["removeBooksPage"] = std::make_unique<RemoveBooksPage>();
+    pages["updateBooksPage"] = std::make_unique<UpdateBooksPage>();
     return pages;
 }();
 

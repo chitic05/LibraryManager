@@ -5,6 +5,8 @@ cmake_policy(SET CMP0009 NEW)
 # MY_RESOURCE_FILES at CMakeLists.txt:22 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/david/Altele/Proiecte/cpp/LibraryManager/res/*")
 set(OLD_GLOB
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/res/library.json"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/res/patrons.json"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
   message("-- GLOB mismatch!")
@@ -14,11 +16,15 @@ endif()
 # MY_SOURCES at CMakeLists.txt:12 (file)
 file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/david/Altele/Proiecte/cpp/LibraryManager/src/*.cpp")
 set(OLD_GLOB
-  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/libraryPage.cpp"
-  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/mainPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/addBooksPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/libraryPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/patronsPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/mainPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/library.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/page.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp"
-  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patronsPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

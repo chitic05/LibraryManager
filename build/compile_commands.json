@@ -1,15 +1,45 @@
 [
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/libraryPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/libraryPage.cpp",
-  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/libraryPage.cpp",
-  "output": "CMakeFiles/LibraryManager.dir/src/Pages/libraryPage.cpp.o"
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/addBooksPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/addBooksPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/addBooksPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/addBooksPage.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/mainPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/mainPage.cpp",
-  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/mainPage.cpp",
-  "output": "CMakeFiles/LibraryManager.dir/src/Pages/mainPage.cpp.o"
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/libraryPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/libraryPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/libraryPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/libraryPage.cpp.o"
+},
+{
+  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o"
+},
+{
+  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp.o"
+},
+{
+  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/patronsPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/patronsPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o"
+},
+{
+  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/mainPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/mainPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/mainPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/mainPage.cpp.o"
+},
+{
+  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/library.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/library.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/library.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/library.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
@@ -22,12 +52,6 @@
   "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp",
   "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp",
   "output": "CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o"
-},
-{
-  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/patronsPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patronsPage.cpp",
-  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patronsPage.cpp",
-  "output": "CMakeFiles/LibraryManager.dir/src/Pages/patronsPage.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
