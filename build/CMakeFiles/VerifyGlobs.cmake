@@ -18,6 +18,7 @@ set(OLD_GLOB
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/mainPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/page.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patronsPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

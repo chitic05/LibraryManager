@@ -25,8 +25,8 @@ CMAKE_AR:FILEPATH=/usr/bin/ar
 //No help, variable specified on the command line.
 CMAKE_BUILD_TYPE:STRING=Debug
 
-//No help, variable specified on the command line.
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++
+//CXX compiler
+CMAKE_CXX_COMPILER:STRING=/usr/bin/g++
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -51,8 +51,8 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//No help, variable specified on the command line.
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc
+//C compiler
+CMAKE_C_COMPILER:STRING=/usr/bin/gcc
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
@@ -146,7 +146,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=SDL3_Game
+CMAKE_PROJECT_NAME:STATIC=LibraryManager
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -214,13 +214,13 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
-SDL3_Game_BINARY_DIR:STATIC=/home/david/Altele/Proiecte/cpp/LibraryManager/build
+LibraryManager_BINARY_DIR:STATIC=/home/david/Altele/Proiecte/cpp/LibraryManager/build
 
 //Value Computed by CMake
-SDL3_Game_IS_TOP_LEVEL:STATIC=ON
+LibraryManager_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
-SDL3_Game_SOURCE_DIR:STATIC=/home/david/Altele/Proiecte/cpp/LibraryManager
+LibraryManager_SOURCE_DIR:STATIC=/home/david/Altele/Proiecte/cpp/LibraryManager
 
 
 ########################

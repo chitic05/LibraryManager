@@ -1,4 +1,4 @@
-/home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/SDL3_Game.dir
+/home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/LibraryManager.dir
 /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/copy_resources.dir
 /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/edit_cache.dir
 /home/david/Altele/Proiecte/cpp/LibraryManager/build/CMakeFiles/rebuild_cache.dir

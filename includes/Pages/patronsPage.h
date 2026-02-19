@@ -1,10 +1,9 @@
 #pragma once
-#include "page.h"
-#include <iostream>
-class MainPage:public Page{
+
+#include "Pages/page.h"
+class PatronsPage:public Page{
     public:
-        MainPage();
+        PatronsPage();
         void Load() override;
         void initNeighbourPages() override;
-
 };

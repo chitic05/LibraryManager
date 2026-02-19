@@ -1,32 +1,38 @@
 [
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/SDL3_Game.dir/src/Pages/libraryPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/libraryPage.cpp",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/libraryPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/libraryPage.cpp",
   "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/libraryPage.cpp",
-  "output": "CMakeFiles/SDL3_Game.dir/src/Pages/libraryPage.cpp.o"
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/libraryPage.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/SDL3_Game.dir/src/Pages/mainPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/mainPage.cpp",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/mainPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/mainPage.cpp",
   "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/mainPage.cpp",
-  "output": "CMakeFiles/SDL3_Game.dir/src/Pages/mainPage.cpp.o"
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/mainPage.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/SDL3_Game.dir/src/Pages/page.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/page.cpp",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/page.cpp",
   "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/page.cpp",
-  "output": "CMakeFiles/SDL3_Game.dir/src/Pages/page.cpp.o"
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/SDL3_Game.dir/src/Pages/pageManager.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp",
   "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp",
-  "output": "CMakeFiles/SDL3_Game.dir/src/Pages/pageManager.cpp.o"
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/SDL3_Game.dir/src/main.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/main.cpp",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/patronsPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patronsPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patronsPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/patronsPage.cpp.o"
+},
+{
+  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/main.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/main.cpp",
   "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/main.cpp",
-  "output": "CMakeFiles/SDL3_Game.dir/src/main.cpp.o"
+  "output": "CMakeFiles/LibraryManager.dir/src/main.cpp.o"
 }
 ]

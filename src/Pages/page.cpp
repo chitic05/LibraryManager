@@ -1,13 +1,15 @@
 #include "Pages/page.h"
 
+// Empty destructor - pages don't delete neighbors (PageManager owns everything)
 Page::~Page(){
-    delete previous;
-    for(uint i = 0; i<next.size(); i++)
-        delete next[i];
 }
 
 std::string Page::getName(){
     return this->pageName;
+}
+
+std::string Page::getKey(){
+    return this->pageKey;
 }
 
 Page* Page::getPrevious(){

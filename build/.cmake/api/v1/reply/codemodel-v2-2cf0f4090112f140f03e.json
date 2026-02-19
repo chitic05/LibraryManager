@@ -28,7 +28,7 @@
 					[
 						0
 					],
-					"name" : "SDL3_Game",
+					"name" : "LibraryManager",
 					"targetIndexes" : 
 					[
 						0,
@@ -40,9 +40,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "SDL3_Game::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-SDL3_Game-Debug-17b1a06f3fbcd0ad4a0e.json",
-					"name" : "SDL3_Game",
+					"id" : "LibraryManager::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LibraryManager-Debug-e4a41692427d2b794b24.json",
+					"name" : "LibraryManager",
 					"projectIndex" : 0
 				},
 				{

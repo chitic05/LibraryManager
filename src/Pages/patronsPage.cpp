@@ -1,40 +1,41 @@
-#include "Pages/mainPage.h"
+#include "Pages/patronsPage.h"
 #include "Pages/pageManager.h"
 #include "terminal.hpp"
-MainPage::MainPage()
+PatronsPage::PatronsPage()
     :Page(){
-    this->pageKey = "mainPage";
-    this->pageName = "Main Page";
-    this->text = "\tMain page\n"
-                 "1. Library management\n"
-                 "2. Patrons management\n"
-                 "--Write the number that represents your pick and press enter--\n";
+    this->pageKey = "patronsPage";
+    this->pageName = "Patrons Page";
+    this->text = "\tPATRONS\n"
+                 "1. Add patron\n"
+                 "2. Update patron\n"
+                 "3. Delete patron\n"
+                 "--Write the number that represents your pick and press enter--\n"
+                 "--press B and enter to go back--\n";
                  
 }
 
-void MainPage::initNeighbourPages(){
-    this->previous = nullptr;
-    this->next = {PageManager::getPage("libraryPage"), PageManager::getPage("patronsPage")};
+void PatronsPage::initNeighbourPages(){
+    this->previous = PageManager::getPage("mainPage");
+    this->next = {};
 }
-void MainPage::Load(){
+void PatronsPage::Load(){
     initNeighbourPages();
     std::string line;
     std::cout << this->text << std::flush;
     std::getline(std::cin, line);
-    
-    
     if(line[0] == '1')
         try{
             PageManager::changePage(this->next[0]);
         }catch(const std::exception& e){
             std::cerr << this->getName() + " couldn't load the next page: "+ e.what() << '\n';
         }
-    else if(line[0] == '2')
+    else if(tolower(line[0]) == 'b'){
         try{
-            PageManager::changePage(this->next[1]);
+            PageManager::changePage(this->previous);
         }catch(const std::exception& e){
             std::cerr << this->getName() + " couldn't load the next page: "+ e.what() << '\n';
         }
+    }
     else
         keyError(line, this->pageKey);
 }

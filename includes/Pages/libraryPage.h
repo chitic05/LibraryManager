@@ -1,7 +1,6 @@
 #pragma once
 
-#include "Pages/mainPage.h" // this also includes page.h
-
+#include "Pages/page.h"
 class LibraryPage:public Page{
     public:
         LibraryPage();
