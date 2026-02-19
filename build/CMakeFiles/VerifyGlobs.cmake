@@ -18,13 +18,22 @@ file(GLOB_RECURSE NEW_GLOB LIST_DIRECTORIES false "/home/david/Altele/Proiecte/c
 set(OLD_GLOB
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/addBooksPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/libraryPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/listBooksPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/OperationsPage/operationsPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/listPatronsPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/patronsPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/returnBookPage.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/updatePatronsPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/mainPage.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/library.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/page.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/pageManager.cpp"
+  "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patron.cpp"
   "/home/david/Altele/Proiecte/cpp/LibraryManager/src/main.cpp"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

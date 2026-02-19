@@ -17,7 +17,7 @@ LibraryPage::LibraryPage(){
 
 void LibraryPage::initNeighbourPages(){
     this->previous = PageManager::getPage("mainPage");
-    this->next = {PageManager::getPage("addBooksPage"), PageManager::getPage("updateBooksPage"), PageManager::getPage("removeBooksPage")};
+    this->next = {PageManager::getPage("addBooksPage"), PageManager::getPage("updateBooksPage"), PageManager::getPage("removeBooksPage"), PageManager::getPage("listBooksPage")};
 }
 
 void LibraryPage::Load(){
@@ -51,6 +51,13 @@ void LibraryPage::Load(){
             PageManager::changePage(this->next[2]);
         }catch(const std::exception& e){
             std::cerr << this->getName() + " couldn't load the remove page: "+ e.what() << '\n';
+        }
+    }
+    else if(line == "4"){
+        try{
+            PageManager::changePage(this->next[3]);
+        }catch(const std::exception& e){
+            std::cerr << this->getName() + " couldn't load the list page: "+ e.what() << '\n';
         }
     }
     else

@@ -63,6 +63,13 @@ build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/libraryPage.c
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage
 
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/listBooksPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/listBooksPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/listBooksPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage
+
 build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp || cmake_object_order_depends_target_LibraryManager
   DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o.d
   FLAGS = -g -std=c++17 -fPIE
@@ -77,8 +84,57 @@ build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/updateBooksPa
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage
 
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/operationsPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/OperationsPage/operationsPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/operationsPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/listPatronsPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/listPatronsPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/listPatronsPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage
+
 build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/patronsPage.cpp || cmake_object_order_depends_target_LibraryManager
   DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/returnBookPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/returnBookPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/returnBookPage.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage
+
+build CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/updatePatronsPage.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/updatePatronsPage.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/updatePatronsPage.cpp.o.d
   FLAGS = -g -std=c++17 -fPIE
   INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
@@ -112,6 +168,13 @@ build CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o: CXX_COMPILER__L
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages
 
+build CMakeFiles/LibraryManager.dir/src/Pages/patron.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/patron.cpp || cmake_object_order_depends_target_LibraryManager
+  DEP_FILE = CMakeFiles/LibraryManager.dir/src/Pages/patron.cpp.o.d
+  FLAGS = -g -std=c++17 -fPIE
+  INCLUDES = -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann
+  OBJECT_DIR = CMakeFiles/LibraryManager.dir
+  OBJECT_FILE_DIR = CMakeFiles/LibraryManager.dir/src/Pages
+
 build CMakeFiles/LibraryManager.dir/src/main.cpp.o: CXX_COMPILER__LibraryManager_unscanned_Debug /home/david/Altele/Proiecte/cpp/LibraryManager/src/main.cpp || cmake_object_order_depends_target_LibraryManager
   DEP_FILE = CMakeFiles/LibraryManager.dir/src/main.cpp.o.d
   FLAGS = -g -std=c++17 -fPIE
@@ -127,7 +190,7 @@ build CMakeFiles/LibraryManager.dir/src/main.cpp.o: CXX_COMPILER__LibraryManager
 #############################################
 # Link the executable LibraryManager
 
-build LibraryManager: CXX_EXECUTABLE_LINKER__LibraryManager_Debug CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/addBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/libraryPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/mainPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/library.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o CMakeFiles/LibraryManager.dir/src/main.cpp.o
+build LibraryManager: CXX_EXECUTABLE_LINKER__LibraryManager_Debug CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/addBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/libraryPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/listBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/removeBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/LibraryPage/updateBooksPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/operationsPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/listPatronsPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/patronsPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/returnBookPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/updatePatronsPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/mainPage.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/library.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/page.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/pageManager.cpp.o CMakeFiles/LibraryManager.dir/src/Pages/patron.cpp.o CMakeFiles/LibraryManager.dir/src/main.cpp.o
   FLAGS = -g
   OBJECT_DIR = CMakeFiles/LibraryManager.dir
   POST_BUILD = :

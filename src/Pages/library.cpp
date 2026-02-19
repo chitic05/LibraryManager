@@ -104,47 +104,55 @@ void LibraryManager::removeBook(std::string id){
     saveChange();
 }
 
-void LibraryManager::updateBook(std::string id, std::string field, std::string value){
+void LibraryManager::updateBook(std::string id, std::string field, std::string value, bool silent){
     // Check if the book exists
     if (!db.contains(id)) {
-        std::cerr << "Error: Book with ID " << id << " not found\n";
-        std::cout << "Press Enter to continue...";
-        std::string l;
-        std::getline(std::cin, l);
+        if (!silent) {
+            std::cerr << "Error: Book with ID " << id << " not found\n";
+            std::cout << "Press Enter to continue...";
+            std::string l;
+            std::getline(std::cin, l);
+        }
         return;
     }
     
     // Check if it's actually a book entry (not maxID)
     if (id == "maxID") {
-        std::cerr << "Error: Cannot update maxID entry\n";
-        std::cout << "Press Enter to continue...";
-        std::string l;
-        std::getline(std::cin, l);
+        if (!silent) {
+            std::cerr << "Error: Cannot update maxID entry\n";
+            std::cout << "Press Enter to continue...";
+            std::string l;
+            std::getline(std::cin, l);
+        }
         return;
     }
     
     // Check if the book entry is an object
     if (!db[id].is_object()) {
-        std::cerr << "Error: Invalid book entry\n";
-        std::cout << "Press Enter to continue...";
-        std::string l;
-        std::getline(std::cin, l);
+        if (!silent) {
+            std::cerr << "Error: Invalid book entry\n";
+            std::cout << "Press Enter to continue...";
+            std::string l;
+            std::getline(std::cin, l);
+        }
         return;
     }
     
     // Update the specified field
     db[id][field] = value;
     
-    std::cout << "Book ID " << id << " updated successfully!\n";
-    std::cout << "Press Enter to continue...";
-    std::string l;
-    std::getline(std::cin, l);
+    if (!silent) {
+        std::cout << "Book ID " << id << " updated successfully!\n";
+        std::cout << "Press Enter to continue...";
+        std::string l;
+        std::getline(std::cin, l);
+    }
     
     // Save to file
     saveChange();
 }
 
-void LibraryManager::displayBooks(){
+bool LibraryManager::displayBooks(std::string filter, std::string searchValue){
     std::cout << "\n========== LIBRARY BOOKS ==========\n";
     
     // Collect all books with their IDs
@@ -152,12 +160,49 @@ void LibraryManager::displayBooks(){
     for (auto& [id, book] : db.items()) {
         if (id == "maxID") continue;
         if (book.is_object() && book.contains("name")) {
-            books.push_back({id, book});
+            // Apply filter
+            bool include = true;
+            
+            if (filter == "all") {
+                // Include all books
+                include = true;
+            } else if (filter == "name" && !searchValue.empty()) {
+                std::string bookName = book["name"];
+                std::string searchLower = searchValue;
+                std::string nameLower = bookName;
+                std::transform(searchLower.begin(), searchLower.end(), searchLower.begin(), ::tolower);
+                std::transform(nameLower.begin(), nameLower.end(), nameLower.begin(), ::tolower);
+                include = (nameLower.find(searchLower) != std::string::npos);
+            } else if (filter == "author" && !searchValue.empty()) {
+                if (book.contains("author")) {
+                    std::string bookAuthor = book["author"];
+                    std::string searchLower = searchValue;
+                    std::string authorLower = bookAuthor;
+                    std::transform(searchLower.begin(), searchLower.end(), searchLower.begin(), ::tolower);
+                    std::transform(authorLower.begin(), authorLower.end(), authorLower.begin(), ::tolower);
+                    include = (authorLower.find(searchLower) != std::string::npos);
+                } else {
+                    include = false;
+                }
+            } else if (filter == "status" && !searchValue.empty()) {
+                if (book.contains("status")) {
+                    std::string bookStatus = book["status"];
+                    include = (bookStatus == searchValue);
+                } else {
+                    include = false;
+                }
+            }
+            
+            if (include) {
+                books.push_back({id, book});
+            }
         }
     }
     
+    bool hasBooks = !books.empty();
+    
     if (books.empty()) {
-        std::cout << "No books in the library.\n";
+        std::cout << "No books found.\n";
     } else {
         // Sort books alphabetically by name
         std::sort(books.begin(), books.end(), 
@@ -181,6 +226,7 @@ void LibraryManager::displayBooks(){
         }
     }
     std::cout << "===================================\n\n";
+    return hasBooks;
 }
 
 bool LibraryManager::hasBooks(){
@@ -191,4 +237,11 @@ bool LibraryManager::hasBooks(){
         }
     }
     return false;
+}
+
+json LibraryManager::getBookInfo(std::string id){
+    if (db.contains(id) && id != "maxID" && db[id].is_object()) {
+        return db[id];
+    }
+    return json::object();
 }

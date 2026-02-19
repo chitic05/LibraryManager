@@ -29,7 +29,13 @@ void AddBooksPage::Load(){
         }catch(const std::exception& e){
             std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
         }
-    }else NaNError(countStr, this->pageKey);
+        return;
+    }else{
+        std::cout << '"' << countStr << "\" isn't a valid number. Please enter the data again\n--press enter to continue--";
+        std::getline(std::cin, line);
+        PageManager::changePage(PageManager::getPage(this->pageKey));
+        return;
+    }
 
     if(count == 0 ){
         try{
@@ -72,7 +78,7 @@ void AddBooksPage::Load(){
                     }
                         
                     else{
-                        std::cout << '\"' << line << "\" isn't an year. Please enter the data again\n--To renter data for Book " << i+1 << " press enter--";
+                        std::cout << '"' << line << "\" isn't an year. Please enter the data again\n--To re-enter data for Book " << i+1 << " press enter--";
                         --i;
                         std::getline(std::cin, line);
                     }
