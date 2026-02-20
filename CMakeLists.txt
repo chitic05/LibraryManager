@@ -16,8 +16,3 @@ target_include_directories(${PROJECT_NAME} PRIVATE
     "${CMAKE_CURRENT_SOURCE_DIR}/includes/"
     "${CMAKE_CURRENT_SOURCE_DIR}/externals/nlohmann" #include json
 )
-
-# Copy resources after every build
-file(GLOB_RECURSE MY_RESOURCE_FILES CONFIGURE_DEPENDS
-    "${CMAKE_SOURCE_DIR}/res/*"
-)
