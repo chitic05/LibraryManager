@@ -189,27 +189,6 @@ The software handles various error scenarios:
 - Non-existent IDs during update/delete operations
 - Duplicate book/patron entries
 
-## Future Enhancements
-
-Potential improvements for extended functionality:
-- Due date tracking and overdue notifications
-- Fine calculation system
-- Book reservation system
-- Multiple copies of the same book
-- Enhanced search with filters
-- Export/import functionality
-- User authentication system
-
-## License
-
-This project is developed as an educational assignment.
-
 ## Author
 
 David - C++ Library Management System
-
-## Acknowledgments
-
-- nlohmann/json library for JSON parsing
-- CMake build system
-- C++17 standard features
