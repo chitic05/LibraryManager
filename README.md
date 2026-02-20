@@ -152,6 +152,42 @@ LibraryManager/
   - IDs are auto-incremented from `maxID` counter
   - Referential integrity maintained between books and patrons
 
+#### JSON Schema Examples
+
+**library.json**:
+```json
+{
+  "maxID": 2,
+  "books": {
+    "1": {
+      "title": "1984",
+      "author": "George Orwell",
+      "year": 1949,
+      "status": "Available"
+    },
+    "2": {
+      "title": "To Kill a Mockingbird",
+      "author": "Harper Lee",
+      "year": 1960,
+      "status": "Borrowed"
+    }
+  }
+}
+```
+
+**patrons.json**:
+```json
+{
+  "maxID": 1,
+  "patrons": {
+    "1": {
+      "name": "John Doe",
+      "booksCheckedOut": ["2"]
+    }
+  }
+}
+```
+
 ### Key Features Implementation
 
 **Error Handling**:
