@@ -191,4 +191,4 @@ The software handles various error scenarios:
 
 ## Author
 
-David - C++ Library Management System
+Chitic David - C++ Library Management System
