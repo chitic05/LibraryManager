@@ -1,6 +1,7 @@
 #include "Pages/page.h"
+#include "Pages/pageManager.h"
+#include <iostream>
 
-// Empty destructor - pages don't delete neighbors (PageManager owns everything)
 Page::~Page(){
 }
 
@@ -14,4 +15,12 @@ std::string Page::getKey(){
 
 Page* Page::getPrevious(){
     return this->previous;
+}
+
+void Page::changePage(Page* page){
+    try{
+        PageManager::changePage(page);
+    }catch(const std::exception& e){
+        std::cerr << this->getName() + " couldn't load the page: "+ e.what() << '\n';
+    }
 }

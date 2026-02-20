@@ -9,7 +9,7 @@ UpdateBooksPage::UpdateBooksPage()
     this->pageKey = "updateBooksPage";
     this->pageName = "Update Books Page";
     this->text = "\tUpdate Books\n"
-                 "--press B and enter to go back--\n";
+                 "--press B and enter anytime to go back--\n";
 }
 
 void UpdateBooksPage::initNeighbourPages(){
@@ -30,11 +30,7 @@ void UpdateBooksPage::Load(){
         std::cout << "No books available to update.\n";
         std::cout << "--press enter to go back--\n";
         std::getline(std::cin, line);
-        try{
-            PageManager::changePage(this->previous);
-        }catch(const std::exception& e){
-            std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-        }
+        changePage(this->previous);
         return;
     }
     
@@ -43,11 +39,7 @@ void UpdateBooksPage::Load(){
     if(onlyDigits(countStr)){
         count = std::stoi(countStr);
     }else if(countStr.length() == 1 && tolower(countStr[0]) == 'b'){
-        try{
-            PageManager::changePage(this->previous);
-        }catch(const std::exception& e){
-            std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-        }
+        changePage(this->previous);
         return;
     }else{
         std::cout << '"' << countStr << "\" isn't a valid number. Please enter the data again\n--press enter to continue--";
@@ -57,11 +49,7 @@ void UpdateBooksPage::Load(){
     }
 
     if(count == 0){
-        try{
-            PageManager::changePage(this->previous);
-        }catch(const std::exception& e){
-            std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-        }
+        changePage(this->previous);
         return;
     }else{
         for(uint i=0; i<count; ++i){
@@ -74,15 +62,21 @@ void UpdateBooksPage::Load(){
             std::getline(std::cin, bookID);
 
             if(bookID.length() == 1 && tolower(bookID[0]) == 'b'){
-                try{
-                    PageManager::changePage(this->previous);
-                }catch(const std::exception& e){
-                    std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-                }
+                changePage(this->previous);
                 return;
             }
 
             if(onlyDigits(bookID)){
+                // Check if book exists
+                json bookInfo = LibraryManager::getBookInfo(bookID);
+                if(bookInfo.empty()){
+                    std::cout << "Error: Book with ID " << bookID << " doesn't exist.\n";
+                    std::cout << "--To re-enter data for Book " << i+1 << " press enter--";
+                    --i;
+                    std::getline(std::cin, line);
+                    continue;
+                }
+                
                 // Update menu
                 clearTerminal();
                 std::cout << this->text;
@@ -147,11 +141,7 @@ void UpdateBooksPage::Load(){
                     std::cout << "--press enter to continue--\n";
                     std::getline(std::cin, line);
                     
-                    try{
-                        PageManager::changePage(this->previous);
-                    }catch(const std::exception& e){
-                        std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-                    }
+                    changePage(this->previous);
                     return;
                 }
             }else{
@@ -167,9 +157,5 @@ void UpdateBooksPage::Load(){
     std::cout << "--press enter to continue--\n";
     std::getline(std::cin, line);
     
-    try{
-        PageManager::changePage(this->previous);
-    }catch(const std::exception& e){
-        std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-    }
+    changePage(this->previous);
 }

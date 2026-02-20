@@ -12,6 +12,7 @@ class PatronManager{
         static bool hasPatrons();
         static bool checkoutBook(std::string patronId, std::string bookId);
         static bool returnBook(std::string patronId, std::string bookId);
+        static json getPatronInfo(std::string id);
         static void initDB();
         static void saveChange();
         

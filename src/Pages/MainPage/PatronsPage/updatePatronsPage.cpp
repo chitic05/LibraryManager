@@ -30,11 +30,7 @@ void UpdatePatronsPage::Load(){
         std::cout << "No patrons available to update.\n";
         std::cout << "--press enter to go back--\n";
         std::getline(std::cin, line);
-        try{
-            PageManager::changePage(this->previous);
-        }catch(const std::exception& e){
-            std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-        }
+        changePage(this->previous);
         return;
     }
     
@@ -43,11 +39,7 @@ void UpdatePatronsPage::Load(){
     if(onlyDigits(countStr)){
         count = std::stoi(countStr);
     }else if(countStr.length() == 1 && tolower(countStr[0]) == 'b'){
-        try{
-            PageManager::changePage(this->previous);
-        }catch(const std::exception& e){
-            std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-        }
+        changePage(this->previous);
         return;
     }else{
         std::cout << '"' << countStr << "\" isn't a valid number. Please enter the data again\n--press enter to continue--";
@@ -57,11 +49,7 @@ void UpdatePatronsPage::Load(){
     }
 
     if(count == 0){
-        try{
-            PageManager::changePage(this->previous);
-        }catch(const std::exception& e){
-            std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-        }
+        changePage(this->previous);
         return;
     }else{
         for(uint i=0; i<count; ++i){
@@ -74,15 +62,21 @@ void UpdatePatronsPage::Load(){
             std::getline(std::cin, patronID);
 
             if(patronID.length() == 1 && tolower(patronID[0]) == 'b'){
-                try{
-                    PageManager::changePage(this->previous);
-                }catch(const std::exception& e){
-                    std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-                }
+                changePage(this->previous);
                 return;
             }
 
             if(onlyDigits(patronID)){
+                // Check if patron exists
+                json patronInfo = PatronManager::getPatronInfo(patronID);
+                if(patronInfo.empty()){
+                    std::cout << "Error: Patron with ID " << patronID << " doesn't exist.\n";
+                    std::cout << "--To re-enter data for Patron " << i+1 << " press enter--";
+                    --i;
+                    std::getline(std::cin, line);
+                    continue;
+                }
+                
                 // Update menu
                 clearTerminal();
                 std::cout << this->text;
@@ -114,10 +108,6 @@ void UpdatePatronsPage::Load(){
             }
         }
         
-        try{
-            PageManager::changePage(this->previous);
-        }catch(const std::exception& e){
-            std::cerr << this->getName() + " couldn't load the previous page: "+ e.what() << '\n';
-        }
+        changePage(this->previous);
     }
 }

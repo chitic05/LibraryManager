@@ -12,7 +12,7 @@ ListPatronsPage::ListPatronsPage()
                  "1. List all patrons\n"
                  "2. Search by name\n"
                  "--Write the number that represents your pick and press enter--\n"
-                 "--press B and enter to go back--\n";
+                 "--press B and enter anytime to go back--\n";
 }
 
 void ListPatronsPage::initNeighbourPages(){

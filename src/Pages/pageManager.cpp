@@ -10,16 +10,14 @@
 #include "Pages/MainPage/PatronsPage/updatePatronsPage.h"
 #include "Pages/MainPage/PatronsPage/removePatronsPage.h"
 #include "Pages/MainPage/PatronsPage/listPatronsPage.h"
-#include "Pages/MainPage/PatronsPage/checkoutBookPage.h"
-#include "Pages/MainPage/PatronsPage/returnBookPage.h"
+#include "Pages/MainPage/OperationsPage/checkoutBookPage.h"
+#include "Pages/MainPage/OperationsPage/returnBookPage.h"
 #include "Pages/MainPage/OperationsPage/operationsPage.h"
 #include "terminal.hpp"
 #include <stdexcept>
 
 Page* PageManager::currentPage = nullptr;
 
-// Registry pattern: Central storage owns all pages via unique_ptr for automatic memory management
-// Lambda initializer used because unique_ptr can't be copied in initializer lists
 std::unordered_map<std::string, std::unique_ptr<Page>> PageManager::allPages = [](){
     std::unordered_map<std::string, std::unique_ptr<Page>> pages;
     pages["mainPage"] = std::make_unique<MainPage>();
@@ -40,8 +38,8 @@ std::unordered_map<std::string, std::unique_ptr<Page>> PageManager::allPages = [
 }();
 
 void PageManager::changePage(Page* nextPage){
-    clearTerminal();  // Clear before showing new page
-    currentPage = nextPage;  // Non-owning pointer - just references page owned by allPages
+    clearTerminal();
+    currentPage = nextPage;
     if(currentPage)
         currentPage->Load();
     else
@@ -51,6 +49,6 @@ void PageManager::changePage(Page* nextPage){
 Page* PageManager::getPage(const std::string& pageName){
     auto it = allPages.find(pageName);
     if(it != allPages.end())
-        return it->second.get();  // .get() returns raw pointer without transferring ownership
+        return it->second.get();
     return nullptr;
 }

@@ -9,11 +9,12 @@ AddBooksPage::AddBooksPage()
     this->pageKey = "addBooksPage";
     this->pageName = "Add Books Page";
     this->text = "\tAdd Books\n"
-                 "--press B and enter to go back--\n";
+                 "--press B and enter anytime to go back--\n";
 }
 
 void AddBooksPage::initNeighbourPages(){
     this->previous = PageManager::getPage("libraryPage");}
+    
 void AddBooksPage::Load(){
     initNeighbourPages();
     std::string countStr, line;

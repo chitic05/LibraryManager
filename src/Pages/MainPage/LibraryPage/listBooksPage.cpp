@@ -14,7 +14,7 @@ ListBooksPage::ListBooksPage()
                  "3. List by author\n"
                  "4. List by status\n"
                  "--Write the number that represents your pick and press enter--\n"
-                 "--press B and enter to go back--\n";
+                 "--press B and enter anytime to go back--\n";
 }
 
 void ListBooksPage::initNeighbourPages(){

@@ -3,7 +3,6 @@
 #include <memory>
 #include <vector>
 
-// Forward declaration to break circular dependency (page.h ← → pageManager.h)
 class PageManager;
 
 class Page{
@@ -16,11 +15,12 @@ class Page{
         virtual std::string getName();
         virtual std::string getKey();
         virtual Page* getPrevious();
+        void changePage(Page* page);
         virtual ~Page();
     protected:
-        std::string pageName;  // Display name like "Main Page"
-        std::string pageKey;   // Key in allPages map like "mainPage"
-        Page* previous;        // Non-owning pointers - just references
+        std::string pageName;
+        std::string pageKey;
+        Page* previous;
         std::vector<Page*> next;
         std::string text;
 };

@@ -11,7 +11,7 @@ AddPatronsPage::AddPatronsPage()
     this->text = "\tADD PATRONS\n"
                  "How many patrons do you want to add?\n"
                  "--Write a number and press enter--\n"
-                 "--press B and enter to go back--\n";
+                 "--press B and enter anytime to go back--\n";
 }
 
 void AddPatronsPage::initNeighbourPages(){

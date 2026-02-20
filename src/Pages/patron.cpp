@@ -4,15 +4,37 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <filesystem>
 
-// Initialize static members
 std::string PatronManager::jsonPath = "res/patrons.json";
 json PatronManager::db = json::object();
 
 void PatronManager::initDB(){
+    namespace fs = std::filesystem;
+    
+    fs::path filePath(jsonPath);
+    fs::path dirPath = filePath.parent_path();
+    
+    if (!dirPath.empty() && !fs::exists(dirPath)) {
+        try {
+            fs::create_directories(dirPath);
+            std::cout << "Created directory: " << dirPath << "\n";
+        } catch (const std::exception& e) {
+            std::cerr << "Failed to create directory " << dirPath << ": " << e.what() << "\n";
+        }
+    }
+    
+    if (!fs::exists(jsonPath)) {
+        std::cout << "File " << jsonPath << " doesn't exist. Creating new file...\n";
+        db = json::object();
+        db["maxID"] = 0;
+        saveChange();
+        return;
+    }
+    
     std::ifstream file(jsonPath);
     if (!file.is_open()) {
-        std::cerr << "Failed to open " << jsonPath << '\n';
+        std::cerr << "Failed to open " << jsonPath << "\n";
         db = json::object();
         db["maxID"] = 0;
         saveChange();
@@ -25,7 +47,7 @@ void PatronManager::initDB(){
             saveChange();
         }
     }catch(const std::exception& e){
-        std::cerr << "JSON parse error: " << e.what() << '\n';
+        std::cerr << "JSON parse error: " << e.what() << "\n";
         db = json::object();
         db["maxID"] = 0;
         saveChange();
@@ -46,13 +68,12 @@ void PatronManager::saveChange(){
 }
 
 void PatronManager::addPatron(std::string name){
-    // Check if maxID exists and is an integer
     if (!db.contains("maxID") || !db["maxID"].is_number_integer()) {
         std::cerr << "Error: maxID not found or invalid, initializing to 0\n";
         db["maxID"] = 0;
     }
     
-    // Check if patron already exists
+    // Check duplicates
     for (auto& [key, value] : db.items()) {
         if (key == "maxID") continue;
         
@@ -67,11 +88,9 @@ void PatronManager::addPatron(std::string name){
         }
     }
     
-    // Get and increment maxID
     int newID = db["maxID"].get<int>() + 1;
     db["maxID"] = newID;
     
-    // Create patron entry using ID as key
     std::string idKey = std::to_string(newID);
     db[idKey] = {
         {"name", name},
@@ -80,12 +99,10 @@ void PatronManager::addPatron(std::string name){
     
     std::cout << "Patron added successfully with ID: " << newID << "\n";
     
-    // Save to file
     saveChange();
 }
 
 void PatronManager::removePatron(std::string id){
-    // Check if the patron exists
     if (!db.contains(id)) {
         std::cerr << "Error: Patron with ID " << id << " not found\n";
         std::cout << "Press Enter to continue...";
@@ -94,7 +111,6 @@ void PatronManager::removePatron(std::string id){
         return;
     }
     
-    // Check if it's actually a patron entry (not maxID)
     if (id == "maxID") {
         std::cerr << "Error: Cannot remove maxID entry\n";
         std::cout << "Press Enter to continue...";
@@ -103,7 +119,7 @@ void PatronManager::removePatron(std::string id){
         return;
     }
     
-    // Check if patron has books checked out
+    // Can't delete if books are checked out
     if (db[id].is_object() && db[id].contains("booksCheckedOut")) {
         if (!db[id]["booksCheckedOut"].empty()) {
             std::cerr << "Error: Cannot delete patron with checked out books. Please return all books first.\n";
@@ -114,7 +130,6 @@ void PatronManager::removePatron(std::string id){
         }
     }
     
-    // Remove the patron
     db.erase(id);
     
     std::cout << "Patron removed successfully!\n";
@@ -122,12 +137,10 @@ void PatronManager::removePatron(std::string id){
     std::string l;
     std::getline(std::cin, l);
     
-    // Save to file
     saveChange();
 }
 
 void PatronManager::updatePatron(std::string id, std::string field, std::string value){
-    // Check if the patron exists
     if (!db.contains(id)) {
         std::cerr << "Error: Patron with ID " << id << " not found\n";
         std::cout << "Press Enter to continue...";
@@ -136,7 +149,6 @@ void PatronManager::updatePatron(std::string id, std::string field, std::string 
         return;
     }
     
-    // Check if it's actually a patron entry (not maxID)
     if (id == "maxID") {
         std::cerr << "Error: Cannot update maxID entry\n";
         std::cout << "Press Enter to continue...";
@@ -145,7 +157,6 @@ void PatronManager::updatePatron(std::string id, std::string field, std::string 
         return;
     }
     
-    // Check if the patron entry is an object
     if (!db[id].is_object()) {
         std::cerr << "Error: Invalid patron entry\n";
         std::cout << "Press Enter to continue...";
@@ -154,7 +165,6 @@ void PatronManager::updatePatron(std::string id, std::string field, std::string 
         return;
     }
     
-    // Update the specified field
     db[id][field] = value;
     
     std::cout << "Patron ID " << id << " updated successfully!\n";
@@ -162,7 +172,6 @@ void PatronManager::updatePatron(std::string id, std::string field, std::string 
     std::string l;
     std::getline(std::cin, l);
     
-    // Save to file
     saveChange();
 }
 
@@ -240,38 +249,32 @@ bool PatronManager::hasPatrons(){
 }
 
 bool PatronManager::checkoutBook(std::string patronId, std::string bookId){
-    // Check if patron exists
     if (!db.contains(patronId) || patronId == "maxID") {
         return false;
     }
     
-    // Check if book exists in library
     json bookInfo = LibraryManager::getBookInfo(bookId);
     if (bookInfo.empty()) {
         return false;
     }
     
-    // Check if book is available
     if (bookInfo.contains("status") && bookInfo["status"] == "Borrowed") {
         return false;
     }
     
-    // Add book to patron's checked out list
     if (!db[patronId].contains("booksCheckedOut")) {
         db[patronId]["booksCheckedOut"] = json::array();
     }
     
-    // Check if book is already checked out by this patron
+    // Check if already checked out
     for (auto& bookIdInList : db[patronId]["booksCheckedOut"]) {
         if (bookIdInList == bookId) {
             return false;
         }
     }
     
-    // Add book ID to patron's list
     db[patronId]["booksCheckedOut"].push_back(bookId);
     
-    // Update book status to "Borrowed" (silent mode)
     LibraryManager::updateBook(bookId, "status", "Borrowed", true);
     
     std::cout << "Book ID " << bookId << " checked out successfully to Patron ID " << patronId << "\n";
@@ -279,23 +282,19 @@ bool PatronManager::checkoutBook(std::string patronId, std::string bookId){
     std::string l;
     std::getline(std::cin, l);
     
-    // Save changes
     saveChange();
     return true;
 }
 
 bool PatronManager::returnBook(std::string patronId, std::string bookId){
-    // Check if patron exists
     if (!db.contains(patronId) || patronId == "maxID") {
         return false;
     }
     
-    // Check if patron has books checked out
     if (!db[patronId].contains("booksCheckedOut") || db[patronId]["booksCheckedOut"].empty()) {
         return false;
     }
     
-    // Find and remove book from patron's list
     auto& books = db[patronId]["booksCheckedOut"];
     bool found = false;
     for (size_t i = 0; i < books.size(); ++i) {
@@ -310,7 +309,6 @@ bool PatronManager::returnBook(std::string patronId, std::string bookId){
         return false;
     }
     
-    // Update book status to "Available" (silent mode)
     LibraryManager::updateBook(bookId, "status", "Available", true);
     
     std::cout << "Book ID " << bookId << " returned successfully by Patron ID " << patronId << "\n";
@@ -318,19 +316,16 @@ bool PatronManager::returnBook(std::string patronId, std::string bookId){
     std::string l;
     std::getline(std::cin, l);
     
-    // Save changes
     saveChange();
     return true;
 }
 
 bool PatronManager::displayPatronBooks(std::string patronId){
-    // Check if patron exists
     if (!db.contains(patronId) || patronId == "maxID") {
         std::cerr << "Error: Patron with ID " << patronId << " not found\n";
         return false;
     }
     
-    // Check if patron has books checked out
     if (!db[patronId].contains("booksCheckedOut") || db[patronId]["booksCheckedOut"].empty()) {
         std::cout << "This patron has no books checked out.\n";
         return false;
@@ -338,10 +333,8 @@ bool PatronManager::displayPatronBooks(std::string patronId){
     
     std::cout << "\n========== BOOKS CHECKED OUT BY PATRON " << patronId << " ==========\n";
     
-    // Get the list of book IDs checked out by this patron
     auto& bookIds = db[patronId]["booksCheckedOut"];
     
-    // Display each book's details by looking it up in the library
     for (const auto& bookId : bookIds) {
         std::string id = bookId;
         json bookInfo = LibraryManager::getBookInfo(id);
@@ -359,4 +352,11 @@ bool PatronManager::displayPatronBooks(std::string patronId){
     
     std::cout << "====================================================\n\n";
     return true;
+}
+
+json PatronManager::getPatronInfo(std::string id){
+    if (db.contains(id) && id != "maxID" && db[id].is_object()) {
+        return db[id];
+    }
+    return json::object();
 }

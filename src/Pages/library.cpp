@@ -3,23 +3,53 @@
 #include <iostream>
 #include <algorithm>
 #include <vector>
+#include <filesystem>
 
-// Initialize static members
 std::string LibraryManager::jsonPath = "res/library.json";
 json LibraryManager::db = json::object();
 
 void LibraryManager::initDB(){
+    namespace fs = std::filesystem;
+    
+    fs::path filePath(jsonPath);
+    fs::path dirPath = filePath.parent_path();
+    
+    if (!dirPath.empty() && !fs::exists(dirPath)) {
+        try {
+            fs::create_directories(dirPath);
+            std::cout << "Created directory: " << dirPath << "\n";
+        } catch (const std::exception& e) {
+            std::cerr << "Failed to create directory " << dirPath << ": " << e.what() << "\n";
+        }
+    }
+    
+    if (!fs::exists(jsonPath)) {
+        std::cout << "File " << jsonPath << " doesn't exist. Creating new file...\n";
+        db = json::object();
+        db["maxID"] = 0;
+        saveChange();
+        return;
+    }
+    
     std::ifstream file(jsonPath);
     if (!file.is_open()) {
-        std::cerr << "Failed to open " << jsonPath << '\n';
+        std::cerr << "Failed to open " << jsonPath << "\n";
         db = json::object();
+        db["maxID"] = 0;
+        saveChange();
         return;
     }
     try{
         db = json::parse(file);
+        if (!db.contains("maxID")) {
+            db["maxID"] = 0;
+            saveChange();
+        }
     }catch(const std::exception& e){
-        std::cerr << "JSON parse error: " << e.what() << '\n';
+        std::cerr << "JSON parse error: " << e.what() << "\n";
         db = json::object();
+        db["maxID"] = 0;
+        saveChange();
     }
 }
 
@@ -37,15 +67,14 @@ void LibraryManager::saveChange(){
 }
 
 void LibraryManager::addBook(std::string name, std::string author, std::string pubYear){
-    // Check if maxID exists and is an integer
     if (!db.contains("maxID") || !db["maxID"].is_number_integer()) {
         std::cerr << "Error: maxID not found or invalid, initializing to 0\n";
         db["maxID"] = 0;
     }
     
-    // Check if book already exists
+    // Check duplicates
     for (auto& [key, value] : db.items()) {
-        if (key == "maxID") continue;  // Skip maxID entry
+        if (key == "maxID") continue;
         
         if (value.is_object() && 
             value.contains("name") && value.contains("author") && value.contains("pubYear")) {
@@ -61,11 +90,9 @@ void LibraryManager::addBook(std::string name, std::string author, std::string p
         }
     }
     
-    // Get and increment maxID
     int newID = db["maxID"].get<int>() + 1;
     db["maxID"] = newID;
     
-    // Create book entry using ID as key
     std::string idKey = std::to_string(newID);
     db[idKey] = {
         {"name", name},
@@ -74,12 +101,10 @@ void LibraryManager::addBook(std::string name, std::string author, std::string p
         {"status", "Available"}
     };
     
-    // Save to file
     saveChange();
 }
 
 void LibraryManager::removeBook(std::string id){
-    // Check if the book exists
     if (!db.contains(id)) {
         std::cerr << "Error: Book with ID " << id << " not found\n";
         std::cout << "Press Enter to continue...";
@@ -88,7 +113,6 @@ void LibraryManager::removeBook(std::string id){
         return;
     }
     
-    // Check if it's actually a book entry (not maxID)
     if (id == "maxID") {
         std::cerr << "Error: Cannot remove maxID entry\n";
         std::cout << "Press Enter to continue...";
@@ -97,15 +121,28 @@ void LibraryManager::removeBook(std::string id){
         return;
     }
     
-    // Remove the book
+    // Can't delete borrowed books
+    if (db[id].is_object() && db[id].contains("status")) {
+        if (db[id]["status"] == "Borrowed") {
+            std::cerr << "Error: Cannot delete a borrowed book. Please return it first.\n";
+            std::cout << "Press Enter to continue...";
+            std::string l;
+            std::getline(std::cin, l);
+            return;
+        }
+    }
+    
     db.erase(id);
     
-    // Save to file
+    std::cout << "Book removed successfully!\n";
+    std::cout << "Press Enter to continue...";
+    std::string l;
+    std::getline(std::cin, l);
+    
     saveChange();
 }
 
 void LibraryManager::updateBook(std::string id, std::string field, std::string value, bool silent){
-    // Check if the book exists
     if (!db.contains(id)) {
         if (!silent) {
             std::cerr << "Error: Book with ID " << id << " not found\n";
@@ -116,7 +153,6 @@ void LibraryManager::updateBook(std::string id, std::string field, std::string v
         return;
     }
     
-    // Check if it's actually a book entry (not maxID)
     if (id == "maxID") {
         if (!silent) {
             std::cerr << "Error: Cannot update maxID entry\n";
@@ -127,7 +163,6 @@ void LibraryManager::updateBook(std::string id, std::string field, std::string v
         return;
     }
     
-    // Check if the book entry is an object
     if (!db[id].is_object()) {
         if (!silent) {
             std::cerr << "Error: Invalid book entry\n";
@@ -138,7 +173,6 @@ void LibraryManager::updateBook(std::string id, std::string field, std::string v
         return;
     }
     
-    // Update the specified field
     db[id][field] = value;
     
     if (!silent) {
@@ -148,23 +182,19 @@ void LibraryManager::updateBook(std::string id, std::string field, std::string v
         std::getline(std::cin, l);
     }
     
-    // Save to file
     saveChange();
 }
 
 bool LibraryManager::displayBooks(std::string filter, std::string searchValue){
     std::cout << "\n========== LIBRARY BOOKS ==========\n";
     
-    // Collect all books with their IDs
     std::vector<std::pair<std::string, json>> books;
     for (auto& [id, book] : db.items()) {
         if (id == "maxID") continue;
         if (book.is_object() && book.contains("name")) {
-            // Apply filter
             bool include = true;
             
             if (filter == "all") {
-                // Include all books
                 include = true;
             } else if (filter == "name" && !searchValue.empty()) {
                 std::string bookName = book["name"];
@@ -204,18 +234,16 @@ bool LibraryManager::displayBooks(std::string filter, std::string searchValue){
     if (books.empty()) {
         std::cout << "No books found.\n";
     } else {
-        // Sort books alphabetically by name
+        // Sort by name
         std::sort(books.begin(), books.end(), 
             [](const std::pair<std::string, json>& a, const std::pair<std::string, json>& b) {
                 std::string nameA = a.second["name"];
                 std::string nameB = b.second["name"];
-                // Case-insensitive comparison
                 std::transform(nameA.begin(), nameA.end(), nameA.begin(), ::tolower);
                 std::transform(nameB.begin(), nameB.end(), nameB.begin(), ::tolower);
                 return nameA < nameB;
             });
         
-        // Display sorted books
         for (const auto& [id, book] : books) {
             std::cout << "ID: " << id;
             if (book.contains("name")) std::cout << " | Title: " << book["name"];

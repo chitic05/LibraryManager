@@ -31,21 +31,27 @@
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/checkoutBookPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/OperationsPage/checkoutBookPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/OperationsPage/checkoutBookPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/checkoutBookPage.cpp.o"
+},
+{
+  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
   "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/operationsPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/OperationsPage/operationsPage.cpp",
   "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/OperationsPage/operationsPage.cpp",
   "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/operationsPage.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp",
-  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp",
-  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp.o"
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/returnBookPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/OperationsPage/returnBookPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/OperationsPage/returnBookPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/OperationsPage/returnBookPage.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp",
-  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp",
-  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/checkoutBookPage.cpp.o"
+  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp",
+  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp",
+  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/addPatronsPage.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
@@ -64,12 +70,6 @@
   "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp",
   "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp",
   "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/removePatronsPage.cpp.o"
-},
-{
-  "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
-  "command": "/usr/bin/g++ -I/home/david/Altele/Proiecte/cpp/LibraryManager/includes -I/home/david/Altele/Proiecte/cpp/LibraryManager/externals/nlohmann -g -std=c++17 -fPIE -o CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/returnBookPage.cpp.o -c /home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/returnBookPage.cpp",
-  "file": "/home/david/Altele/Proiecte/cpp/LibraryManager/src/Pages/MainPage/PatronsPage/returnBookPage.cpp",
-  "output": "CMakeFiles/LibraryManager.dir/src/Pages/MainPage/PatronsPage/returnBookPage.cpp.o"
 },
 {
   "directory": "/home/david/Altele/Proiecte/cpp/LibraryManager/build",
